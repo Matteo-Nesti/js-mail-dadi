@@ -11,19 +11,19 @@ const emails = ['matteo.nesti@hotmail.com', 'nutellabiscuits@hgmail.com', 'gengi
 
 // entro in ascolto del bottone
 
+// default message
+let isValid = 'Hai sbagliato, Riprova!!';
 
 buttonElement.addEventListener('click', function() {
-
-    let isValid = 'Hai sbagliato, Riprova!!';
-
-    const email = inputElement.value.trim()
-
+// control all mail
     for (let i = 0; i < emails.length; i++) {
-        if (emails[i] === email) {
+        //conditions
+        if (emails[i] === inputElement.value) {
             isValid = 'Bentornato'
             inputContainerElement.classList.add('d-none')
         }
     }
+    //print
     message.innerText = isValid
 }) 
 
