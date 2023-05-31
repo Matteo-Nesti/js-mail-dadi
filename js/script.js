@@ -8,21 +8,22 @@ const message = document.getElementById('welcomebackMessage')
 // creo lista Email 
 const emails = ['matteo.nesti@hotmail.com', 'nutellabiscuits@hgmail.com', 'gengiskhan@libero.it' ]
 
+
 // entro in ascolto del bottone
+
 
 buttonElement.addEventListener('click', function() {
 
-    // verifica
-    if (emails.indexOf(inputElement.value) === -1) {
-        alert('la tua mail non esiste, perfavore iscriviti!!')
-        return
-    }
+    let isValid = 'Hai sbagliato, Riprova!!';
 
-    // stampo in pagina
-    
-    inputContainerElement.classList.add('d-none')
-    message.innerText = 'Ben Tornato!!'
-  
+    const email = inputElement.value.trim()
+
+    for (let i = 0; i < emails.length; i++) {
+        if (emails[i] === email) {
+            isValid = 'Bentornato'
+            inputContainerElement.classList.add('d-none')
+        }
+    }
+    message.innerText = isValid
 }) 
-    
 
