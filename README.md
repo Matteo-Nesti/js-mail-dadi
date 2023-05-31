@@ -19,6 +19,22 @@ Mail
   - **ALTRIMENTI**
     - stampiamo in pagina il messaggio di OK
 
-Gioco dei dadi Generare un numero random da 1 a 6, sia per il giocatore sia per
-il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
-Stampare (in console)
+---
+
+Gioco dei dadi
+
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto. Stampare (in
+console)
+
+- creare una variabile per il computer
+- creare una variabile per il giocatore
+- al click del bottone
+  - genera un numero casuale da 1 a 6 per il computer
+  - genera un numero casuale da 1 a 6 per il giocatore
+  - controllo
+  - **SE** in numeri usciti sono pari
+    - ritira i dadi
+  - **ALTRIMENTI SE** il numero lanciato dal computer e` piu alto
+    - il computer vince
+    - **ALTRIMENTI** vince il giocatore.
